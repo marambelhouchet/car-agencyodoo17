@@ -1,0 +1,24 @@
+<odoo>
+    <record id="view_car_damage_wizard" model="ir.ui.view">
+        <field name="name">car_damaged_wizard</field>
+        <field name="model">car_damaged_wizard</field>
+        <field name="arch" type="xml">
+            <form string="Car Damage">
+                <group>
+                    <field name="note"/>
+                </group>
+                <footer>
+                    <button string="Save" type="object" name="save_damage_note_and_close" class="btn btn-primary"/>
+                    <button string="Cancel" class="btn btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_car_damaged_wizard" model="ir.actions.act_window">
+        <field name="name">Mark Car as Damaged</field>
+        <field name="res_model">car_damaged_wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

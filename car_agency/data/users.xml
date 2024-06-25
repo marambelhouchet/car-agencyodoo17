@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+        <record id="custom_user_1" model="res.users">
+            <field name="name">admin1</field>
+            <field name="login">admin1</field>
+            <field name="email">admin1@example.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('custom_group_car_access')])]"/>
+            <field name="password">admin1</field>
+            <field name="groups_id" eval="[(4, ref('base.group_erp_manager'))]"/>
+        </record>
+
+        <record id="custom_user_2" model="res.users">
+            <field name="name">user</field>
+            <field name="login">user</field>
+            <field name="email">user@example.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('custom_group_car_access')])]"/>
+            <field name="password">user</field>
+        </record>
+    </data>
+</odoo>

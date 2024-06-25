@@ -1,0 +1,42 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Custom Group -->
+        <record id="custom_group_car_access" model="res.groups">
+            <field name="name">Custom Group Car Access</field>
+            <field name="category_id" ref="base.module_category_hidden"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!-- Règles d'accès -->
+        <record id="access_custom_group_car_access_ir_module_module" model="ir.model.access">
+            <field name="name">access_custom_group_car_access_ir_module_module</field>
+            <field name="model_id" ref="base.model_ir_module_module"/>
+            <field name="group_id" ref="custom_group_car_access"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <record id="access_custom_group_car_access_ir_module_module_dependency" model="ir.model.access">
+            <field name="name">access_custom_group_car_access_ir_module_module_dependency</field>
+            <field name="model_id" ref="base.model_ir_module_module_dependency"/>
+            <field name="group_id" ref="custom_group_car_access"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <record id="access_custom_group_car_access_ir_module_module_exclusion" model="ir.model.access">
+            <field name="name">access_custom_group_car_access_ir_module_module_exclusion</field>
+            <field name="model_id" ref="base.model_ir_module_module_exclusion"/>
+            <field name="group_id" ref="custom_group_car_access"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+    </data>
+</odoo>
+

@@ -1,0 +1,47 @@
+<odoo>
+    <data>
+        <!-- Access rights for Car model -->
+        <record id="access_car" model="ir.model.access">
+            <field name="name">Access Car</field>
+            <field name="model_id" ref="model_car"/>
+            <field name="group_id" ref="custom_group_car_access"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <!-- Access rights for Car Brand model -->
+        <record id="access_car_brand" model="ir.model.access">
+            <field name="name">Access Car Brand</field>
+            <field name="model_id" ref="model_car_brand"/>
+            <field name="group_id" ref="custom_group_car_access"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <!-- Access rights for Car Agency model -->
+        <record id="access_car_agency" model="ir.model.access">
+            <field name="name">Access Car Agency</field>
+            <field name="model_id" ref="model_car_agency"/>
+            <field name="group_id" ref="custom_group_car_access"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <!-- Access rights for Car Damaged Wizard model -->
+        <record id="access_car_damaged_wizard" model="ir.model.access">
+            <field name="name">Access Car Damaged Wizard</field>
+            <field name="model_id" ref="model_car_damaged_wizard"/>
+            <field name="group_id" ref="custom_group_car_access"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+     <menuitem
+                id="menu_car_agency_root"
+                name="Car Agencies"
+                sequence="10"/>
+        <menuitem
+                id="agency"
+                name="agency"
+                parent="menu_car_agency_root"
+                sequence="10"/>
+
+        <menuitem
+                id="brand"
+                name="brandcar"
+                parent="menu_car_agency_root"
+                sequence="10"/>
+        <menuitem
+                    id="menu_car"
+                    name="Cars"
+                    parent="menu_car_agency_root"
+                    action="action_car"/>
+    </data>
+</odoo>

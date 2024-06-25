@@ -1,0 +1,41 @@
+<odoo>
+    <record id="view_car_tree" model="ir.ui.view">
+        <field name="name">car.tree</field>
+        <field name="model">car</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="registration_number"/>
+                <field name="car_model"/>
+                <field name="status"/>
+                <field name="agency_id"/>
+                <button name="%(car_agency.action_car_damaged_wizard)d" type="action" string="Add damage description" class="btn btn-danger" invisible="status != 'damaged'"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_car_form" model="ir.ui.view">
+        <field name="name">car.form</field>
+        <field name="model">car</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="registration_number"/>
+                    <field name="car_model"/>
+                    <field name="mileage"/>
+                    <field name="status" invisible="status != 'damaged'"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="agency_id"/>
+                    <field name="customer_id"/>
+                    <field name="note" invisible="status != 'damaged'"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_car" model="ir.actions.act_window">
+        <field name="name">Cars</field>
+        <field name="res_model">car</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

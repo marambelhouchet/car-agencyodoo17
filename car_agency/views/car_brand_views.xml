@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="view_car_brand_tree" model="ir.ui.view">
+        <field name="name">car_brand.tree</field>
+        <field name="model">car_brand</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="agency_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_car_brand_form" model="ir.ui.view">
+        <field name="name">car_brand.form</field>
+        <field name="model">car_brand</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                    <field name="image"/>
+                    <field name="description"/>
+                    <field name="agency_id"/>
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="action_brand" model="ir.actions.act_window">
+        <field name="name">My brand</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">car_brand</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="b"
+              name="brand"
+              parent="menu_car_agency_root"
+              action="action_brand"
+              sequence="10"/>
+
+
+</odoo>
