@@ -1,5 +1,6 @@
 <odoo>
     <data>
+
         <!-- Access rights for Car model -->
         <record id="access_car" model="ir.model.access">
             <field name="name">Access Car</field>
@@ -43,5 +44,17 @@
             <field name="perm_create" eval="1"/>
             <field name="perm_unlink" eval="1"/>
         </record>
+
+        <!-- Access rights for Res Partner model -->
+        <record id="access_res_partner" model="ir.model.access">
+            <field name="name">Access Res Partner</field>
+            <field name="model_id" ref="model_res"/>
+            <field name="group_id" ref="custom_group_car_access"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
     </data>
 </odoo>

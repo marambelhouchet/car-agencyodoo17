@@ -4,6 +4,7 @@
      <menuitem
                 id="menu_car_agency_root"
                 name="Car Agencies"
+                web_icon="car_agency,static/description/img.png"
                 sequence="10"/>
         <menuitem
                 id="agency"

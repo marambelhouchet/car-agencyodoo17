@@ -14,8 +14,12 @@
         'data/groups.xml',
         'data/access_rights.xml',
         'data/users.xml',
+        'views/res.xml',
     ],
-'images': ['static/description/img.jpg'],
+    'images': [
+        'car_agency/static/description/icon.png',
+
+           ],
     'installable': True,
     'application': True,
     'auto_install': False,

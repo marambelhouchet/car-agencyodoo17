@@ -6,7 +6,15 @@
             <field name="category_id" ref="base.module_category_hidden"/>
             <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
         </record>
-
+        <record id="access_custom_group_car_access_ir_module_module" model="ir.model.access">
+            <field name="name">Access Custom Group Car Access to ir.module.module</field>
+            <field name="model_id" ref="base.model_ir_module_module"/>
+            <field name="group_id" ref="custom_group_car_access"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
         <!-- Règles d'accès -->
         <record id="access_custom_group_car_access_ir_module_module" model="ir.model.access">
             <field name="name">access_custom_group_car_access_ir_module_module</field>
@@ -38,5 +46,52 @@
             <field name="perm_unlink" eval="True"/>
         </record>
     </data>
+    <data>
+    <record id="access_custom_group_car_access_ir_ui_view" model="ir.model.access">
+            <field name="name">Access Custom Group Car Access to ir.ui.view</field>
+            <field name="model_id" ref="base.model_ir_ui_view"/>
+            <field name="group_id" ref="custom_group_car_access"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+    </data>
+    <record id="access_custom_group_car_access_website_page" model="ir.model.access">
+            <field name="name">Access Custom Group Car Access to website.page</field>
+            <field name="model_id" ref="website.model_website_page"/>
+            <field name="group_id" ref="custom_group_car_access"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+    <record id="access_custom_group_car_access_website_page" model="ir.model.access">
+    <field name="name">Access Custom Group Car Access to website.page</field>
+    <field name="model_id" ref="website.model_website_page"/>
+    <field name="group_id" ref="custom_group_car_access"/>
+    <field name="perm_read" eval="True"/>
+    <field name="perm_write" eval="True"/>
+    <field name="perm_create" eval="True"/>
+    <field name="perm_unlink" eval="True"/>
+</record>
+    <record id="access_custom_group_car_access_res_config_settings" model="ir.model.access">
+            <field name="name">Access Custom Group Car Access to res.config.settings</field>
+            <field name="model_id" ref="base.model_res_config_settings"/>
+            <field name="group_id" ref="custom_group_car_access"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+    <record id="access_custom_group_car_access_all_base_models" model="ir.model.access">
+            <field name="name">Access Custom Group Car Access to All Base Models</field>
+            <field name="model_id" ref="base.model_res_groups"/>
+            <field name="group_id" ref="custom_group_car_access"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
 </odoo>
 
